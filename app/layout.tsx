@@ -5,7 +5,7 @@ import {
   SignInButton,
   SignedIn,
   SignedOut,
-  UserButton
+  UserButton,
 } from '@clerk/nextjs'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,12 +23,12 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-          <SignedOut>
+          {/* <SignedOut>
             <SignInButton />
           </SignedOut>
           <SignedIn>
             <UserButton />
-          </SignedIn>
+          </SignedIn> */}
           {children}
         </body>
       </html>

@@ -25,7 +25,7 @@ model JournalEntry {
   content   String    @db.String()
   analysis  Analysis?
 
-  @@index([userId])
+  @@unique([userId, id])
 }
 
 model Analysis {
