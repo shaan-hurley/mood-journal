@@ -17,7 +17,7 @@ const parser = StructuredOutputParser.fromZodSchema(
 const getPrompt = async (content) => {
     const format_instructions = parser.getFormatInstructions()
     const prompt = new PromptTemplate({
-        template: 'Analyze the following journal entry. Follow the instructions and format your response to match the format instructions, no matter what! \n{format_instructions}\n{entry}',
+        template: 'Analyze the following journal entry. Follow the instructions and format your response to match the format instructions, no matter what! \n {format_instructions}\n {entry}',
         inputVariables: ['entry'],
         partialVariables: { format_instructions }
     })
